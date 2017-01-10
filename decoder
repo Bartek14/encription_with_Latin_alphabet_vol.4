@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    char outputCharacter;
+    char digitChar;
+    int number;
+
+do{
+    digitChar = cin.get();
+    number = digitChar- '0';
+    digitChar = cin.get();
+    while ((digitChar!=10)&&(digitChar!=','))
+       {    number= number * 10+(digitChar - '0');
+    digitChar=cin.get();
+       }
+       number=number%27;
+       if (number == 0)
+        cout<<" ";
+        //{outputCharacter== '95';}
+       else
+    {
+    outputCharacter= number + 'A'-1;
+    }
+     cout<< outputCharacter;
+
+       }
+       while (digitChar!=10);
+   return 0;
+  }
+
